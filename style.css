@@ -15,10 +15,24 @@ body{
     margin: auto;
     max-width: 90%;
 }
+/* responsive design */
+@media (min-width: 920px){
+    body{
+        background: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
+        background-position: top left, bottom right;
+        background-repeat: no-repeat;
+    }
+
+    .content{
+        margin: 5rem;
+    }
+}
 
 /* first section */
 .first{
     margin-bottom: 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 .heading{
@@ -59,10 +73,32 @@ body{
     color: hsl(300, 43%, 22%);
     font-weight: 600;
 }
+/* responsive design */
+@media (min-width: 920px){
+    .first{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .heading{
+        text-align: left;
+        margin-right: 1.5rem;
+    }
+    
+    .head{
+        margin-top: 0;
+    }
+
+    .head-note{
+        margin-bottom: 0;
+    }
+}
 
 /* second section */
 .second{
     margin-bottom: 4rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
 }
 .card_item{
     background-color: hsl(300, 43%, 22%);
@@ -88,4 +124,10 @@ body{
 
 .card_status{
     color: hsl(333, 80%, 67%);
+}
+/* responsive design */
+@media (min-width: 920px){
+    .second{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
